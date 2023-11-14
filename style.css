@@ -1,0 +1,9 @@
+header {
+    flex: 10%;
+    /* background-image: url('./img/piano-background.png'); */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: red;
+    /* justify-content: centers; */
+    text-align: center;
+}
