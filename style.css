@@ -1,9 +1,86 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+nav {
+    color: #000000;
+    padding: 10px 0;
+    background-color: green;
+    opacity: 0.7;
+}
+
+nav:hover {
+    opacity: 1;
+}
+
 header {
-    flex: 10%;
-    /* background-image: url('./img/piano-background.png'); */
-    background-size: 100% auto;
+    color: #000000;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-image: url(./assets/img/background.jpg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-color: red;
-    /* justify-content: centers; */
-    text-align: center;
+    height: 50vh;
+}
+
+#product-list img {
+    opacity: 0.7;
+}
+
+#product-list img:hover {
+    opacity: 1;
+}
+
+.leftBody {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex: 80%;
+    flex-wrap: wrap;
+}
+
+.rightBody {
+    flex: 10%;
+    justify-content: flex-end;
+}
+
+.slider {
+    margin-top: 20px;
+}
+
+.product-block {
+    margin-bottom: 20px;
+}
+
+.news-block {
+    background-color: #eeeeee;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
