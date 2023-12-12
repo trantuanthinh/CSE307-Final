@@ -1,8 +1,9 @@
-const list = [
+var list = [
     {
         name: "Guitar",
         image: "./assets/img/guitar-product.png",
         price: 1050000,
+        description: "The guitar, with its strings and diverse tonal range, is a beloved instrument, widely embraced across musical genres.",
         hyperlink: "./Instrument-Story/guitar.html",
         function: showGuitarHistory(),
     },
@@ -11,6 +12,7 @@ const list = [
         name: "Piano",
         image: "./assets/img/piano-product.png",
         price: 6535000,
+        description: "The piano, known for its expressive keys and dynamic range, stands as a timeless and versatile musical instrument in diverse genres.",
         hyperlink: "./Instrument-Story/piano.html",
         function: showPianoHistory(),
     },
@@ -19,6 +21,7 @@ const list = [
         name: "Ukulele",
         image: "./assets/img/ukulele-product.png",
         price: 750000,
+        description: "The ukulele, with its four strings and lively sound, is a charming and popular instrument known for its portability and unique character.",
         hyperlink: "./Instrument-Story/ukulele.html",
         function: showUkuleleHistory(),
     },
@@ -27,7 +30,7 @@ const list = [
         name: "Violin",
         image: "./assets/img/violin-product.png",
         price: 1050000,
-        hyperlink: "./Instrument-Story/violin.html",
+        description: "The violin, with its four strings and expressive tones, is a cherished musical instrument celebrated for its versatility in various genres.", hyperlink: "./ Instrument - Story / violin.html",
         function: showViolinHistory(),
     },
 
@@ -35,6 +38,7 @@ const list = [
         name: "Guitar",
         image: "./assets/img/guitar-product.png",
         price: 1050000,
+        description: "The guitar, with its strings and diverse tonal range, is a beloved instrument, widely embraced across musical genres.",
         hyperlink: "./Instrument-Story/guitar.html",
         function: showGuitarHistory(),
     },
@@ -43,6 +47,7 @@ const list = [
         name: "Piano",
         image: "./assets/img/piano-product.png",
         price: 6535000,
+        description: "The piano, known for its expressive keys and dynamic range, stands as a timeless and versatile musical instrument in diverse genres.",
         hyperlink: "./Instrument-Story/piano.html",
         function: showPianoHistory(),
     },
@@ -51,6 +56,7 @@ const list = [
         name: "Ukulele",
         image: "./assets/img/ukulele-product.png",
         price: 750000,
+        description: "The ukulele, with its four strings and lively sound, is a charming and popular instrument known for its portability and unique character.",
         hyperlink: "./Instrument-Story/ukulele.html",
         function: showUkuleleHistory(),
     },
@@ -59,7 +65,7 @@ const list = [
         name: "Violin",
         image: "./assets/img/violin-product.png",
         price: 1050000,
-        hyperlink: "./Instrument-Story/violin.html",
+        description: "The violin, with its four strings and expressive tones, is a cherished musical instrument celebrated for its versatility in various genres.", hyperlink: "./ Instrument - Story / violin.html",
         function: showViolinHistory(),
     },
 ];
@@ -83,7 +89,26 @@ document.addEventListener("DOMContentLoaded", function () {
         let tempList = filterUniqueListName();
         for (let i = 0; i < tempList.length; i++) {
             let instrument = tempList[i];
-            string += `<a href="${instrument.hyperlink}" onclick=${instrument.function}><img width="100" src="${instrument.image}" alt="${instrument.name}"></a>`;
+            if (i === 0) {
+                string += `<div class=" carousel-item active" data-bs-interval="10000">
+                                <div class="text-center" style="flex:1">
+                                    <a href="${instrument.hyperlink}"><img height="200" src="${instrument.image}" alt="${instrument.name}"></a>
+                                </div>
+                                <div class="text-center align-content-center d-none d-md-block" style="flex:1">
+                                    <h5>${instrument.name}</h5>
+                                    <p>${instrument.description}</p>
+                                </div>
+                            </div>`;
+            }
+            string += `<div class=" carousel-item" data-bs-interval="10000">
+                                <div class="text-center" style="flex:1">
+                                    <a href="${instrument.hyperlink}"><img height="200" src="${instrument.image}" alt="${instrument.name}"></a>
+                                </div>
+                                <div class="text-center align-content-center d-none d-md-block" style="flex:1">
+                                    <h5>${instrument.name}</h5>
+                                    <p>${instrument.description}</p>
+                                </div>
+                            </div>`;
         }
         document.getElementById("slider").innerHTML += string;
     }

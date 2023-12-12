@@ -113,12 +113,24 @@
     </nav>
 
     <div class="justify-content-between">
-        <div>
-            <div class="border-top border-bottom border-1 border-dark my-3 text-center" style="flex:1" id="slider">
+        <div class="text-center">
+            <p>** Click for more historic informations **</p>
+        </div>
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="10000">
+            <div class="carousel-inner border-top border-bottom border-1 border-dark my-3 text-center" id="slider">
             </div>
-            <div class="text-center">
-                <p><i>Click for more detail</i></p>
-            </div>
+
+            <button class="carousel-control-prev bg-success bg-opacity-50" type="button"
+                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next bg-success bg-opacity-50" type="button"
+                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
